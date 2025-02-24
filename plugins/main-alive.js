@@ -24,7 +24,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
           title: "THE XLICON-V2 IS ALIVE 🌟",
           body: "XLICON BOT",
           thumbnailUrl: img,
-          sourceUrl: 'https://chat.whatsapp.com/C4ivwZKuh5bLJkqfYNPQsk',
+          sourceUrl: 'https://whatsapp.com/channel/0029VayY2vu1NCrLQHzmRB2Q',
           mediaType: 1,
           renderLargerThumbnail: true
           }}
