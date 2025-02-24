@@ -16,3 +16,4 @@ COPY . .
 RUN docker build -t image .
 RUN docker run -d -p 5000:5000 image
 EXPOSE WEBSITE http://localhost:5000
+
