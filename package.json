@@ -8,9 +8,9 @@
     "start": "node start.js"              
   },
   "keywords": [
-    "Whatsapp Bot By Salman Ahmad"
+    "Whatsapp Bot By Dark prince "
   ],
-  "author": "Salman-Ahmad",
+  "author": "Aadhi ser",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys" : "latest",
