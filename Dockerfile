@@ -12,7 +12,7 @@ COPY package.json .
 
 RUN npm install -g pm2
 
-COPY . .
+RUN with `node server.mjs`
 
 EXPOSE 5000
 
