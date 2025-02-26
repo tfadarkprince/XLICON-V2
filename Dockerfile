@@ -1,7 +1,23 @@
-FROM node:lts-buster
+FROM node:lts
 
-RUN git clone https://github.com/tfadarkprince/XLICON-V2 /root/XLICON-V2-MD
-WORKDIR /root/XLICON-V2-MD/
-RUN yarn install
-EXPOSE 5000
-CMD ["npm", "start"]
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install && npm cache clean --force
+RUN npm install -g pm2
+
+# Copy application code
+COPY . .
+
+# Set environment
+ENV NODE_ENV production
+
+# Run command
+CMD ["npm", "run", "start"]
