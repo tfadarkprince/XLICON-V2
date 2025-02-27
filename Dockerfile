@@ -10,11 +10,14 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install -g pm2
+RUN npm cache clean --force&npm cache verify & npm start -- --reset-cache & npm install -g pm2
 
 # Copy application code
 COPY . .
 
+# Set environment
+ENV NODE_ENV production
 
 # Run command
 CMD ["npm", "run", "start"]
+
