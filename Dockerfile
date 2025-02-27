@@ -15,8 +15,6 @@ RUN npm cache clean --force&npm cache verify & npm start -- --reset-cache & npm 
 # Copy application code
 COPY . .
 
-# Set environment
-ENV NODE_ENV production
 
 # Run command
 CMD ["npm", "run", "start"]
