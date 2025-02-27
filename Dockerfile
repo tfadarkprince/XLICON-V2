@@ -1,20 +1,6 @@
 FROM node:lts-buster
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
-
-COPY package.json .
-
-RUN npm install && npm cache clean --force && npm install -g pm2
-
-
-COPY . .
-
-EXPOSE 5000
-
-CMD ["npm", "run", "start"]
+RUN git clone https://github.com/tfadarkprince/XLICON-V2.git /root/XLICON-V2/
+WORKDIR /root/XLICON-V2/
+RUN yarn install
+CMD ["npm", "start"]
