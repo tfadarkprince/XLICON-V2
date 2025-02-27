@@ -3,7 +3,7 @@ FROM node:lts-buster
 ARG npm install
 COPY package.json .
 
-RUN  npm install qrcode-terminal 
+ARG  npm install qrcode-terminal 
  
 
 COPY . .
