@@ -12,6 +12,7 @@ COPY package.json .
 
 RUN  npm install qrcode-terminal 
 
+RUN npm install 
 
 COPY . .
 
