@@ -1,6 +1,6 @@
 FROM node:lts-buster
 
-COPY npm install
+PKG Install installnpm install
 COPY package.json .
 
 RUN  npm install qrcode-terminal 
