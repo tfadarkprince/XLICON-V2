@@ -1,17 +1,20 @@
 FROM node:lts-buster
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
 
-COPY package.json .
+# Set working directory
+WORKDIR /app
 
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install -g pm2
 
-EXPOSE 5000
+# Copy application code
+COPY . .
 
-CMD ["npm", "start"]
+
+# Run command
+CMD ["npm", "run", "start"]
