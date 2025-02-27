@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm cache clean --force&npm cache verify & npm start -- --reset-cache & npm install -g pm2
+RUN yarn install
 
 # Copy application code
 COPY . .
