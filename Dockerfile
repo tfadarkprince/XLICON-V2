@@ -1,13 +1,16 @@
 FROM node:lts-buster
 
-# Install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
-
-WORKDIR /app
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
 COPY package.json .
 
-RUN yarn install
+RUN npm install && npm install qrcode-terminal
 
 COPY . .
 
