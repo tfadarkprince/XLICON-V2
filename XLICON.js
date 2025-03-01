@@ -381,17 +381,12 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
- const msg = `Hai🤩${name} Congrats you have successfully deployed xlicon-v2-BOT\nJoin my support Channel for any info\n https://whatsapp.com/channel/0029VaMGgVL3WHTNkhzHik3c`
+ const msg = `Hai🤩${name} Congrats you have successfully deployed xlicon-v2-BOT-by darkprince(aadhiser)\nJoin my support Channel for any info\n https://whatsapp.com/channel/0029VayY2vu1NCrLQHzmRB2Q`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
     
     conn.logger.info(chalk.yellow('\n🚩 aadhi ser'))
   }
-
-  if (connection == 'close') {
-    conn.logger.error(chalk.yellow(`\nconnection closed....Get a New Session`))
-  }
-}
 
 process.on('uncaughtException', console.error)
 
