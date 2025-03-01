@@ -25,18 +25,18 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/salmanytofficial/XLICON-V2-MD",
+    "homepage": "https://github.com/tfadarkprince/XLICON-V2",
     "author": {
-        "name": "GURU"
+        "name": "Aadhi"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/salmanytofficial/XLICON-V2-MD.git"
+        "url": "git+https://github.com/tfadarkprince/XLICON-V2"
     },
     "bugs": {
-        "url": "https://github.com/salmanytofficial/XLICON-V2-MD/issues"
+        "url": "https://github.com/tfadarkprince/XLICON-V2"
     },
-    "license": "Apache License 2.0",
+    "license": "MIT License",
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^5.0.1",
