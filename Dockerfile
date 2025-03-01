@@ -1,19 +1,23 @@
-FROM node:lts-buster
+FROM node:lts
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp \ npm && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
 
-COPY package.json .
+# Set working directory
+WORKDIR /app
 
-RUN yarn install
+# Copy package files
+COPY package*.json ./
 
+# Install dependencies
+RUN npm install && npm cache clean --force
+RUN npm install -g pm2
+
+# Copy application code
 COPY . .
 
-EXPOSE 5000
+# Set environment
+ENV NODE_ENV production
 
-CMD ["npm", "start"]
+# Run command
+CMD ["npm", "run", "start"]
