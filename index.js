@@ -21,7 +21,7 @@ say("XLICON - V2", {
   'maxLength': '15'
 });
 
-say("Xlicon-BOT-V2 By Salman._.", {
+say("Xlicon-BOT-V2 By Aadhiser._.", {
   'font': "chrome",
   'align': "center",
   'colors': ["red", "magenta"],
