@@ -3,17 +3,10 @@
     "version": "2.0.0",
     "description": "Advanced WhatsApp Bot",
     "main": "index.js",
-    "type": "module",
-    "directories": {
-        "lib": "lib",
-        "src": "src",
-        "plugins": "plugins"
-    },
     "scripts": {
-        "start": "node index.js",
-        "test": "node test.js"
-    },
-    "keywords": [
+"start": "PIDUSAGE_SILENT=true pm2 start . --attach --name hermit-md"
+  },
+   "keywords": [
         "termux-whatsapp-bot",
         "whatsapp-bot",
         "whatsapp",
