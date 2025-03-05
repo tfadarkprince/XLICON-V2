@@ -10,7 +10,7 @@
 
 
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=ff0000&center=true&width=900&height=100&lines=Its%20XLICON-V2;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20Dark%20prince)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=ff0000&center=true&width=900&height=100&lines=Its%20hermit;%20Multi-Device%20WhatsApp%20Bot;%20Developed%20By%20Dark%20prince)
 <p align="center">
   
 >XLICON-V2 is based on :
